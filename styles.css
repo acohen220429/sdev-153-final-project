@@ -1,0 +1,170 @@
+/*
+Name: Amit Cohen
+Course: SDEV153
+Project: Video Game Hobby Website
+*/
+
+body, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #000;
+}
+
+header .hero {
+  background: #cfd4ff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  color: #3a3df0;
+  font-size: 2.5rem;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.hero p {
+  color: #6666cc;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #3a3df0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #2a2bd0;
+}
+
+.featured {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.game-box {
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.game-box:hover {
+  transform: scale(1.05);
+}
+
+.timeline {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+.timeline h2 {
+  text-align: center;
+}
+
+.timeline-row {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.timeline-row h3.decade {
+  color: #3a3df0;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #3a3df0;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eaeaea;
+  margin-top: 2rem;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .timeline-row {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .game-box {
+    width: 200px;
+    height: 120px;
+  }
+}

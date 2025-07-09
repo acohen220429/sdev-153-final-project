@@ -11,8 +11,15 @@ Project: Video Game Hobby Website
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About the creator of this video game library website.">
+    <meta name="keywords" content="video games, game reviews, gaming library, Nintendo, game suggestions, Amit Cohen">
     <title>About Me - My Gaming Library</title>
+    <link rel="icon" type="image/png" href="videogamecontrollericon.png">
     <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="About Me - My Gaming Library">
+    <meta property="og:description" content="About Amit Cohen, creator of this video game library website.">
+    <meta property="og:image" content="videogamecontrollericon.png">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
@@ -20,18 +27,26 @@ Project: Video Game Hobby Website
         <nav class="main-nav">
             <ul>
                 <li><a href="gaminglibrary.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="about.html" aria-current="page">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
+            <a href="gaminglibrary.html" class="logo-link" aria-label="Home">
+                <img src="videogamecontrollericon.png" alt="Pixel art video game controller logo" class="site-logo"
+                    width="80" height="80">
+            </a>
             <h1>About Me</h1>
             <p>Learn more about the gamer behind this library</p>
-            <a href="gaminglibrary.html" class="cta-button">Back to Library</a>
+            <a href="#about-section" class="cta-button">Meet Amit</a>
         </div>
     </header>
-
     <main>
-        <section class="about-section">
+        <div class="welcome-intro">
+            <p>Welcome! I'm Amit, a lifelong gamer and Nintendo fan. This page is all about my gaming journey, favorite
+                consoles, and what inspired me to create this site.</p>
+        </div>
+        <section class="about-section" id="about-section">
             <h2>Hi, I'm Amit Cohen! <span class="about-emoji">🎮</span></h2>
             <div class="about-flex">
                 <div class="about-bio">
@@ -51,6 +66,8 @@ Project: Video Game Hobby Website
                     </ul>
                 </div>
             </div>
+        </section>
+        <section id="top-consoles">
             <h3>Top 3 Nintendo Consoles <span class="about-emoji">🏆</span></h3>
             <table class="about-table">
                 <thead>
@@ -68,23 +85,24 @@ Project: Video Game Hobby Website
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>DS</td>
-                        <td>Portable, innovative dual screens, and tons of classic Nintendo titles.</td>
+                        <td>Switch</td>
+                        <td>Hybrid design, portability, and a huge variety of games.</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Switch</td>
-                        <td>Hybrid design, great for both home and portable play, and the latest Nintendo experiences.
-                        </td>
+                        <td>GameCube</td>
+                        <td>Classic multiplayer fun and some of the best exclusives ever.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2025 My Gaming Library</p>
+        <p>&copy; 2025 My Gaming Library &mdash; Thanks for visiting! Happy gaming! <span aria-label="video game"
+                role="img">🎮</span></p>
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -34,3 +34,53 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+// Contact form submission: show all field values in an alert, with email validation
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        // Error elements
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+        // Reset errors
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+        let valid = true;
+        // Name validation
+        if (!name) {
+            nameError.textContent = 'Name is required.';
+            valid = false;
+        }
+        // Email validation
+        if (!email) {
+            emailError.textContent = 'Email is required.';
+            valid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            emailError.style.color = 'red';
+            valid = false;
+        } else {
+            emailError.textContent = '';
+            emailError.style.color = '';
+        }
+        // Message validation
+        if (!message) {
+            messageError.textContent = 'Message is required.';
+            valid = false;
+        }
+        if (!valid) {
+            return false;
+        }
+        // Show all fields in alert
+        alert(`Thank you for your suggestion!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        alert(
+            `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+        );
+    });
+}

@@ -1,0 +1,197 @@
+<!--
+Name: Amit Cohen
+Course: SDEV153
+Project: Video Game Hobby Website
+-->
+
+<!-- This is now the main entry point (formerly gaminglibrary.html) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of the many video games I have played throughout my life">
+    <meta name="keywords" content="video games, game reviews, gaming library, Nintendo, game suggestions, Amit Cohen">
+    <title>My Gaming Library</title>
+    <link rel="icon" type="image/png" href="videogamecontrollericon.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="My Gaming Library">
+    <meta property="og:description"
+        content="Browse Amit Cohen's personal video game library, reviews, and suggestions.">
+    <meta property="og:image" content="videogamecontrollericon.png">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <a href="index.html" class="logo-link" aria-label="Home">
+                <img src="videogamecontrollericon.png" alt="Pixel art video game controller logo" class="site-logo"
+                    width="80" height="80">
+            </a>
+            <h1>Explore My Gaming Library</h1>
+            <p>A collection of the many video games I have played throughout my life</p>
+            <nav class="jump-nav" aria-label="Jump to section">
+                <a href="#featured" class="jump-link">Featured</a>
+                <a href="#timeline" class="jump-link">Timeline</a>
+                <a href="contact.html" class="jump-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-intro">
+            <p>Welcome! I'm Amit, and this is my personal collection of video games I've played and loved over the
+                years. Dive in to find reviews, a timeline of video games I've played, and maybe even your next favorite
+                game!</p>
+        </div>
+        <section class="featured" id="featured">
+            <h2>Featured Games</h2>
+            <p class="featured-desc">These are my top 3 favorite games, each with a full review you can read on this
+                site. Click a game to see my thoughts, tips, and more!</p>
+            <ul class="featured-grid">
+                <li class="game-box">
+                    <a href="minecraft-review.html" class="featured-link">
+                        <h3>Minecraft</h3>
+                        <p class="game-desc">A sandbox adventure game where creativity and survival go hand in hand.
+                            Discover why Minecraft is a timeless classic in my review!</p>
+                    </a>
+                </li>
+                <li class="game-box">
+                    <a href="zelda-totk-review.html" class="featured-link">
+                        <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                        <p class="game-desc">Nintendo's epic open-world adventure. Read my review for tips, favorite
+                            moments, and why this Zelda is a must-play.</p>
+                    </a>
+                </li>
+                <li class="game-box">
+                    <a href="mario-kart-world-review.html" class="featured-link">
+                        <h3>Mario Kart World</h3>
+                        <p class="game-desc">The ultimate kart racing experience! Check out my review for track
+                            highlights, best characters, and multiplayer fun.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="timeline" id="timeline">
+            <h2>Game Release Timeline</h2>
+            <p class="timeline-desc">Below are games I've played, sorted by their release decade. Click any game to
+                learn more about it on Wikipedia!</p>
+
+            <div class="timeline-row">
+                <h3 class="decade">1990s</h3>
+                <ul class="scroll-container">
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_World" target="_blank"
+                            rel="noopener">🍄<br>Super Mario World<br><span class="release-date">1990</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past"
+                            target="_blank" rel="noopener">🗡️<br>The Legend of Zelda: A Link to the Past<br><span
+                                class="release-date">1991</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Final_Fantasy_VI" target="_blank"
+                            rel="noopener">🐉<br>Final Fantasy VI<br><span class="release-date">1994</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Metroid" target="_blank"
+                            rel="noopener">👾<br>Super Metroid<br><span class="release-date">1994</span></a></li>
+                    <li class="game-box"><a
+                            href="https://en.wikipedia.org/wiki/Donkey_Kong_Country_2:_Diddy%27s_Kong_Quest"
+                            target="_blank" rel="noopener">🐵<br>Donkey Kong Country 2<br><span
+                                class="release-date">1995</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Chrono_Trigger" target="_blank"
+                            rel="noopener">⏳<br>Chrono Trigger<br><span class="release-date">1995</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_RPG" target="_blank"
+                            rel="noopener">⭐<br>Super Mario RPG<br><span class="release-date">1996</span></a></li>
+                </ul>
+            </div>
+
+            <div class="timeline-row">
+                <h3 class="decade">2000s</h3>
+                <ul class="scroll-container">
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Final_Fantasy_IX" target="_blank"
+                            rel="noopener">💎<br>Final Fantasy IX<br><span class="release-date">2000</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Metroid_Fusion" target="_blank"
+                            rel="noopener">🧬<br>Metroid Fusion<br><span class="release-date">2002</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Castlevania:_Aria_of_Sorrow"
+                            target="_blank" rel="noopener">🦇<br>Castlevania: Aria of Sorrow<br><span
+                                class="release-date">2003</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Emerald" target="_blank"
+                            rel="noopener">🐲<br>Pokémon Emerald<br><span class="release-date">2004</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/New_Super_Mario_Bros." target="_blank"
+                            rel="noopener">🍄<br>New Super Mario Bros.<br><span class="release-date">2006</span></a>
+                    </li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_Galaxy" target="_blank"
+                            rel="noopener">🌌<br>Super Mario Galaxy<br><span class="release-date">2007</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl" target="_blank"
+                            rel="noopener">⚔️<br>Super Smash Bros. Brawl<br><span class="release-date">2008</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="timeline-row">
+                <h3 class="decade">2010s</h3>
+                <ul class="scroll-container">
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_Galaxy_2" target="_blank"
+                            rel="noopener">🌌<br>Super Mario Galaxy 2<br><span class="release-date">2010</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Mario_Kart_8" target="_blank"
+                            rel="noopener">🏎️<br>Mario Kart 8<br><span class="release-date">2014</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Yakuza_0" target="_blank"
+                            rel="noopener">🕶️<br>Yakuza 0<br><span class="release-date">2015</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Undertale" target="_blank"
+                            rel="noopener">💀<br>Undertale<br><span class="release-date">2015</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild"
+                            target="_blank" rel="noopener">🌿<br>The Legend of Zelda: Breath of the Wild<br><span
+                                class="release-date">2017</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_Odyssey" target="_blank"
+                            rel="noopener">🧢<br>Super Mario Odyssey<br><span class="release-date">2017</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate"
+                            target="_blank" rel="noopener">⚔️<br>Super Smash Bros. Ultimate<br><span
+                                class="release-date">2018</span></a></li>
+                </ul>
+            </div>
+
+            <div class="timeline-row">
+                <h3 class="decade">2020s</h3>
+                <ul class="scroll-container">
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons"
+                            target="_blank" rel="noopener">🏝️<br>Animal Crossing: New Horizons<br><span
+                                class="release-date">2020</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Metroid_Dread" target="_blank"
+                            rel="noopener">👾<br>Metroid Dread<br><span class="release-date">2021</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Legends:_Arceus"
+                            target="_blank" rel="noopener">🦄<br>Pokémon Legends: Arceus<br><span
+                                class="release-date">2022</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Super_Mario_Bros._Wonder"
+                            target="_blank" rel="noopener">🌼<br>Super Mario Bros. Wonder<br><span
+                                class="release-date">2023</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Like_a_Dragon:_Infinite_Wealth"
+                            target="_blank" rel="noopener">💸<br>Like a Dragon: Infinite Wealth<br><span
+                                class="release-date">2024</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Dragon_Ball:_Sparking!_Zero"
+                            target="_blank" rel="noopener">🐉<br>Dragon Ball: Sparking! Zero<br><span
+                                class="release-date">2024</span></a></li>
+                    <li class="game-box"><a href="https://en.wikipedia.org/wiki/Mario_%26_Luigi:_Brothership"
+                            target="_blank" rel="noopener">👬<br>Mario & Luigi: Brothership<br><span
+                                class="release-date">2024</span></a></li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Gaming Library &mdash; Thanks for visiting! Happy gaming! <span aria-label="video game"
+                role="img">🎮</span></p>
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

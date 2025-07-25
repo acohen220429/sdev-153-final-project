@@ -41,9 +41,19 @@
 
   .game-box {
     min-width: 0;
-    width: 98vw;
-    max-width: 340px;
+    width: 100vw;
+    max-width: none;
+    box-sizing: border-box;
     padding: 1rem 0.5rem;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .featured-grid {
+    width: 100vw;
+    box-sizing: border-box;
+    margin-left: -8px;
+    margin-right: -8px;
   }
 
   .timeline {

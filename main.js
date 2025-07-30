@@ -1,3 +1,29 @@
+// Mobile accordion menu toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const mainNav = document.querySelector('.main-nav');
+if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('open');
+        if (mainNav.classList.contains('open')) {
+            mobileMenuToggle.setAttribute('aria-label', 'Close menu');
+            mobileMenuToggle.textContent = '✕ Close';
+        } else {
+            mobileMenuToggle.setAttribute('aria-label', 'Open menu');
+            mobileMenuToggle.textContent = '☰ Menu';
+        }
+    });
+    // Close menu when a nav link is clicked (for better UX)
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 600) {
+                mainNav.classList.remove('open');
+                mobileMenuToggle.setAttribute('aria-label', 'Open menu');
+                mobileMenuToggle.textContent = '☰ Menu';
+            }
+        });
+    });
+}
+// Dark mode toggle
 /*
 Name: Amit Cohen
 Course: SDEV153
@@ -79,8 +105,5 @@ if (contactForm) {
         }
         // Show all fields in alert
         alert(`Thank you for your suggestion!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
-        alert(
-            `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-        );
     });
 }

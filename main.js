@@ -1,28 +1,41 @@
 // Mobile accordion menu toggle
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const mainNav = document.querySelector('.main-nav');
-if (mobileMenuToggle && mainNav) {
-    mobileMenuToggle.addEventListener('click', function () {
-        mainNav.classList.toggle('open');
-        if (mainNav.classList.contains('open')) {
-            mobileMenuToggle.setAttribute('aria-label', 'Close menu');
-            mobileMenuToggle.textContent = '✕ Close';
-        } else {
-            mobileMenuToggle.setAttribute('aria-label', 'Open menu');
-            mobileMenuToggle.textContent = '☰ Menu';
-        }
-    });
-    // Close menu when a nav link is clicked (for better UX)
-    mainNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (mobileMenuToggle && mainNav) {
+        function updateMenuVisibility() {
             if (window.innerWidth <= 600) {
+                mobileMenuToggle.style.display = 'block';
                 mainNav.classList.remove('open');
+            } else {
+                mobileMenuToggle.style.display = 'none';
+                mainNav.classList.remove('open');
+            }
+        }
+        updateMenuVisibility();
+        window.addEventListener('resize', updateMenuVisibility);
+        mobileMenuToggle.addEventListener('click', function () {
+            mainNav.classList.toggle('open');
+            if (mainNav.classList.contains('open')) {
+                mobileMenuToggle.setAttribute('aria-label', 'Close menu');
+                mobileMenuToggle.textContent = '✕ Close';
+            } else {
                 mobileMenuToggle.setAttribute('aria-label', 'Open menu');
                 mobileMenuToggle.textContent = '☰ Menu';
             }
         });
-    });
-}
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    mainNav.classList.remove('open');
+                    mobileMenuToggle.setAttribute('aria-label', 'Open menu');
+                    mobileMenuToggle.textContent = '☰ Menu';
+                }
+            });
+        });
+    }
+});
+// ...existing code...
 // Dark mode toggle
 /*
 Name: Amit Cohen

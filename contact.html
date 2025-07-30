@@ -23,6 +23,8 @@ Project: Video Game Hobby Website
 </head>
 
 <body>
+    <button id="mobileMenuToggle" class="cta-button" aria-label="Open menu"
+        style="display:none;position:fixed;top:1rem;right:1rem;z-index:1001;">☰ Menu</button>
     <header>
         <nav class="main-nav">
             <ul>
@@ -47,33 +49,39 @@ Project: Video Game Hobby Website
                 just say hi!</p>
         </div>
         <section class="contact-section" id="contact-section">
-            <h2>Suggest a Game or Request a Review</h2>
-            <p class="contact-intro">If you have any video games you'd like me to check out or review, please fill out
-                the form below. I love discovering new games and sharing my thoughts!</p>
-            <form class="contact-form" action="#" method="post" autocomplete="on" novalidate
-                aria-labelledby="contact-heading" onsubmit="return validateContactForm(event)">
-                <fieldset>
-                    <legend id="contact-heading">Suggest a Game or Request a Review</legend>
-                    <label for="name">Name:<span class="sr-only"> (required)</span></label>
-                    <input type="text" id="name" name="name" required autocomplete="name" aria-required="true"
-                        placeholder="Your name">
-                    <span class="form-error" id="name-error" aria-live="polite"></span>
+            <div class="contact-header-container">
+                <h2>Suggest a Game or Request a Review</h2>
+                <p class="contact-intro">If you have any video games you'd like me to check out or review, please fill
+                    out
+                    the form below. I love discovering new games and sharing my thoughts!</p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" action="#" method="post" autocomplete="on" novalidate
+                    aria-labelledby="contact-heading" onsubmit="return validateContactForm(event)">
+                    <fieldset>
+                        <legend id="contact-heading">Suggest a Game or Request a Review</legend>
+                        <label for="name">Name:<span class="sr-only"> (required)</span></label>
+                        <input type="text" id="name" name="name" required autocomplete="name" aria-required="true"
+                            placeholder="Your name">
+                        <span class="form-error" id="name-error" aria-live="polite"></span>
 
-                    <label for="email">Email:<span class="sr-only"> (required)</span></label>
-                    <input type="email" id="email" name="email" required autocomplete="email" aria-required="true"
-                        placeholder="you@email.com">
-                    <span class="form-error" id="email-error" aria-live="polite"></span>
+                        <label for="email">Email:<span class="sr-only"> (required)</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" aria-required="true"
+                            placeholder="you@email.com">
+                        <span class="form-error" id="email-error" aria-live="polite"></span>
 
-                    <label for="message">Message:<span class="sr-only"> (required)</span></label>
-                    <textarea id="message" name="message" rows="5" required aria-required="true"
-                        aria-describedby="message-desc"
-                        placeholder="What game should I check out or review?"></textarea>
-                    <span id="message-desc" class="sr-only">Describe the game you want me to check out or review.</span>
-                    <span class="form-error" id="message-error" aria-live="polite"></span>
+                        <label for="message">Message:<span class="sr-only"> (required)</span></label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"
+                            aria-describedby="message-desc"
+                            placeholder="What game should I check out or review?"></textarea>
+                        <span id="message-desc" class="sr-only">Describe the game you want me to check out or
+                            review.</span>
+                        <span class="form-error" id="message-error" aria-live="polite"></span>
 
-                    <button type="submit" class="cta-button">Send Suggestion</button>
-                </fieldset>
-            </form>
+                        <button type="submit" class="cta-button">Send Suggestion</button>
+                    </fieldset>
+                </form>
+            </div>
             <div id="form-success" class="form-success" role="status" aria-live="polite" style="display:none;"></div>
         </section>
     </main>
